@@ -9,7 +9,6 @@ import lombok.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Set;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -30,8 +29,8 @@ public class Event implements Serializable {
     LocalDate dateFin;
     float cout;
     @ManyToMany(mappedBy = "events")
-    Set<Participant> participants;
+    private Set<Participant> participants;
     @OneToMany(fetch = FetchType.EAGER)
-    Set<Logistics> logistics;
+    private Set<Logistics> logistics;
 
 }
