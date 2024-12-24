@@ -1,13 +1,15 @@
 package tn.esprit.eventsproject.entities;
 
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.*;
+
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -16,6 +18,11 @@ import java.io.Serializable;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 public class Logistics implements Serializable {
+    @jakarta.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
+    private Long id;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idLog;
