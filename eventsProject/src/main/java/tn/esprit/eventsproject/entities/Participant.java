@@ -21,7 +21,7 @@ public class Participant implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(nullable = false)
     private Long id;
-//add
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idPart;
